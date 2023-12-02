@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" conteudo="width=device-width, initial-scale=1.0">
+    <title>Lady Care</title>
+    <link rel="stylesheet" href="pagDenuncia.css">
+    <link rel="shortcut icon" href="Imagens/LogoGuia.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="Imagens/logo.png"  alt="Logo do site">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tiposViolencia.html">Descrições</a></li>
+                <li><a href="ajudaInstantanea.html">Ajuda</a></li>
+            </ul>
+
+            <ul class="icones">
+                <a href="pagDenuncia.html"><li class="icone"><img src="Imagens/pessoa.png" alt="Ícone pessoa"></li></a>
+                <a href="tiposViolencia.html"><li class="icone"><img src="Imagens/carrinho.png" alt="Ícone pessoa"></li></a>
+                <a href="ajudaInstantanea.html"><li class="icone"><img src="Imagens/fone.png" alt="Ícone pessoa"></li></a>
+            </ul>
+        </nav>
+
+        <div class="barraPesquisa">
+            <input type="text" placeholder="Pesquisar">
+            <button type="submit">Ir</button>
+        </div>
+    </header>
+
+    <div class="conteudo">
+        <h3>Denuncie aqui!</h3>
+        <p>Aqui você pode escolher entre fazer uma denúncia anônima ou identificada:</p>
+
+        <div class="colunas">
+            <div class="coluna">
+                <a href="#popup1"><img src="Imagens/lenco.png" alt="Imagem Lenço"></a>
+                <h3>Denúncia Anônima</h3>
+                <p> Em uma denúncia anônima você não precisa se identificar com nome.</p>
+                <a href="#popup1" class="botao">Denúncia Anônima</a>
+            </div>
+            <div class="coluna">
+                <a href="#popup2"><img src="Imagens/brinco.png" alt="Imagem Brinco"></a>
+                <h3>Denúncia Identificada</h3>
+                <p> Em uma denúncia identificada pedimos que você se identifique com seu nome.</p>
+                <a href="#popup2" class="botao">Denúncia Identificada</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup1">
+        <div class="popup-content">
+            <span class="close"><a href="#">×</a></span>
+            <h3>Preencha as informações abaixo:</h3>
+            <form class="formulario" action="/submit" method="post">
+                <h4>Formulário Anônimo</h4>
+                <label for="tiposViolencia">Selecione o tipo de violência:</label>
+                <select id="tiposViolencia" name="tiposViolencia" required>
+                    <option disabled selected>Selecione uma opção</option>
+                    <option value="fisica">Física</option>
+                    <option value="psicologica">Psicológica</option>
+                    <option value="sexual">Sexual</option>
+                    <option value="patrimonial">Patrimonial</option>
+                    <option value="moral">Moral</option>
+                    <option value="outro">Não consegui identificar</option>
+                </select>
+                <a href="tiposViolencia.html"><p>Clique aqui para ver os tipos de violência</p></a>
+
+                <label for="identificacao">
+                    <input type="checkbox" id="identificacao" name="identificacao">
+                    Estou fazendo uma denúncia para outra pessoa
+                </label>
+
+                <h5>Sobre o agressor</h5>
+                <p>(Não se preocupe caso não souber essas informações, esses campos não são obrigatórios)</p>
+                <label for="nome">Nome do agressor:</label>
+                <input type="text" id="nomeAgressor" name="nomeAgressor">
+
+                <label for="idadeVitima">Idade agressor</label>
+                <input type="number" id="idadeAgressor" name="idadeAgressor">
+
+
+                <h5>Endereço</h5>
+                <label for="endereco">Rua:</label>
+                <input type="text" id="rua" name="rua" required>
+
+                <label for="numero">Número:</label>
+                <input type="number" id="numero" name="numero" required>
+
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" required>
+
+                <label for="pontoReferencia">Ponto de Referência:</label>
+                <input type="text" id="pontoReferencia" name="pontoReferencia">
+
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento" name="complemento">
+        
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup" id="popup2">
+        <div class="popup-content">
+            <span class="close"><a href="#">×</a></span>
+            <h3>Preencha as informações abaixo:</h3>
+            <form class="formulario" action="/submit" method="post">
+                <h4>Formulário Identificado</h4>
+                <label for="tiposViolencia">Selecione o tipo de violência:</label>
+                <select id="tiposViolencia" name="tiposViolencia" required>
+                    <option disabled selected>Selecione uma opção</option>
+                    <option value="fisica">Física</option>
+                    <option value="psicologica">Psicológica</option>
+                    <option value="sexual">Sexual</option>
+                    <option value="patrimonial">Patrimonial</option>
+                    <option value="moral">Moral</option>
+                    <option value="outro">Não consegui identificar</option>
+                </select>
+                <a href="tiposViolencia.html"><p>Clique aqui para ver os tipos de violência</p></a>
+
+                <label for="identificacao">
+                    <input type="checkbox" id="identificacao" name="identificacao">
+                    Estou fazendo uma denúncia para outra pessoa
+                </label>
+
+                <h5>Sobre a vítima</h5>
+                <label for="nome">Nome da vítima:</label>
+                <input type="text" id="nomeVitima" name="nomeVitima" required>
+
+                <label for="idadeVitima">Idade vítima</label>
+                <input type="number" id="idadeVitima" name="idadeVitima" required>
+
+                <h5>Sobre o agressor</h5>
+                <p>(Não se preocupe caso não souber essas informações, esses campos não são obrigatórios)</p>
+                <label for="nome">Nome do agressor:</label>
+                <input type="text" id="nomeAgressor" name="nomeAgressor">
+
+                <label for="idadeVitima">Idade agressor</label>
+                <input type="number" id="idadeAgressor" name="idadeAgressor">
+
+                <h5>Endereço</h5>
+                <label for="endereco">Rua:</label>
+                <input type="text" id="rua" name="rua" required>
+
+                <label for="numero">Número:</label>
+                <input type="number" id="numero" name="numero" required>
+
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" required>
+
+                <label for="pontoReferencia">Ponto de Referência:</label>
+                <input type="text" id="pontoReferencia" name="pontoReferencia">
+
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento" name="complemento">
+        
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Lady Care</p>
+    </footer>
+</body>
+</html>
