@@ -93,6 +93,223 @@ nav ul li img {
     cursor: pointer;
 }
 
+.conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden; /* Para limpar o float */
+    line-height: 2.0;
+    padding-bottom: 100px;
+}
+
+.conteudo p {
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+.coluna {
+    width: 50%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    max-width: 500px;
+    position: relative;
+}
+
+.coluna img {
+    width: 100%;
+    height: auto;
+    max-width: 50%;
+    border-radius: 5px;
+}
+
+.coluna h3 {
+    font-size: 17px;
+    width: 100%;
+    margin-left: 5px;
+}
+
+.coluna p {
+    font-size: 15px;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 65%;
+}
+
+.coluna .botao {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid black;
+    background-color: black;
+    margin-top: 20px;
+    transition: transform 0.25s ease;
+    text-decoration: none;
+    color: #F8F6F7;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.coluna .botao:hover {
+    transform: scale(1.05);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Certifica-se de que o popup está acima de outros elementos */
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Defina a largura do popup */
+    max-width: 800px; /* Adicione uma largura máxima opcional */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.popup:target {
+    display: block;
+}
+
+
+.formulario {
+    margin: 20px 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-height: 500px; /* Altura máxima do formulário, ajuste conforme necessário */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+}
+
+.formulario a {
+    text-decoration: none;
+    color: rgb(162, 161, 161);
+    font-size: 12px;
+    text-align: right;
+}
+
+.formulario h4 {
+    text-align: center;
+}
+
+.formulario h5 {
+    font-size: 15px;
+}
+
+.formulario p {
+    font-size: 12px;
+    color: rgb(162, 161, 161);
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 13px;
+    margin-left: 18px;
+}
+
+select {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    color: rgb(162, 161, 161);
+    border: 1.5px solid;
+    border-color: #eeb1db;
+    border-radius: 20px;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1.5px solid;
+    border-color: #eeb1db;
+    border-radius: 20px;
+}
+
+#tiposViolencia {
+    margin-left: 20px;
+}
+
+/* Estilo para a checkbox */
+#identificacao {
+    width: 20px; 
+    margin-right: 10px; 
+}
+
+#nomeVitima {
+    margin-left: 20px;
+}
+
+#idadeVitima {
+    max-width: 20%;
+    margin-left: 20px;
+}
+
+#nomeAgressor{
+    margin-left: 20px;
+}
+
+#idadeAgressor{
+    max-width: 20%;
+    margin-left: 20px;
+}
+
+#rua {
+    margin-left: 20px;
+}
+
+#numero {
+    max-width: 20%;
+    margin-left: 20px;
+}
+
+#bairro {
+    margin-left: 20px;
+}
+
+#pontoReferencia {
+    margin-left: 20px;
+}
+
+#complemento {
+    margin-left: 20px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px;
+    width: 20%;
+}
 
 footer {
     background-color: white;
